@@ -1,10 +1,10 @@
-const express = require('express');
+const express = require("express");
 
-const recipieRouter = require('./recipes/recipes-router');
+const recipeRouter = require("./recipes/recipes-router");
 
 const server = express();
 
 server.use(express.json());
-server.use('/api/schemes', recipieRouter);
+server.use("/api/recipes", recipeRouter);
 
 module.exports = server;
